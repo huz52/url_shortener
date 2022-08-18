@@ -1,0 +1,206 @@
+{% load static %}
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>URL Shortener </title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="{% static 'bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+
+	<style type="text/css">
+		header {
+			text-align: center;
+			background: lightseagreen;
+			color: white;
+			position: relative;
+		}
+
+		header .container {
+			padding-top: 30px;
+			padding-bottom: 30px;
+			position: relative;
+			
+		}
+
+		header .intro-text .name {
+			display: block;
+			font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			text-transform: uppercase;
+			
+			
+		}
+
+		@media (min-width: 768px) {
+			header .container {
+				padding-top: 100px;
+				padding-bottom: 60px;
+			}
+
+			header .intro-text .name {
+				font-size: 3em;
+			}
+
+			header .intro-text .skills {
+				font-size: 2em;
+			}
+		}
+
+		.navbar-custom {
+			background: #2C3E50;
+			font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			text-transform: none;
+			font-weight: 700;
+			font-size: x-large;
+			border: none;
+			padding-left: 5%;
+			padding-right: 5%;
+			/* text-align: center; */
+			color: white;
+			width: 100%;
+		}
+
+		#id_src {
+			display: block;
+			height: 44px;
+			padding: 6px 12px;
+			font-size: 18px;
+			color: #555;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			width: 600px;
+		}
+
+		#id_custom {
+			display: inline-block;
+			height: 30px;
+			font-size: 18px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+
+		#form_input_error {
+			color: red;
+			padding: 5px 15px;
+			display: inline-block;
+			font-size: 20px;
+			font-weight: 700;
+			letter-spacing: 1px;
+		}
+
+		#form_output {
+			background: #2C3E50;
+			line-height: 50px;
+			margin-top: 2px;
+			height: 0;
+			width: 60%;
+			margin: 0 auto;
+			font-size: 25px;
+		}
+
+		#form_output a {
+			color: black;
+			font-size: 25px;
+		}
+
+		#form_output a:hover {
+			color: darkblue;
+		}
+
+		footer {
+			color: white;
+			width: 100%;
+			position: relative;
+			left: 0;
+			bottom: 0;
+			padding: 1px 1px;
+			background-color: #233140;
+		}
+
+		.ab:link, .ab:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+		input { color: black }
+
+	</style>
+
+</head>
+
+<body class="index homepage">
+
+	<nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="https://ra-shorturl.herokuapp.com/" style="color: white; font-size: x-large;">URL Shortener</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a class="navbar-brand" href="https://ra-shorturl.herokuapp.com/" style="color: white; font-size: 18px">Home</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a class="navbar-brand" href="https://ra-shorturl.herokuapp.com/analytics" style="color: white; font-size: 18px;">Analytics</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a class="navbar-brand" href="https://ra-shorturl.herokuapp.com/views" style="color: white; font-size: 20px;">Visits</a>
+			</div>
+			<div class="navbar-header">
+				
+			</div>
+
+		</div>
+	</nav>
+
+	<header style="height: 97%;">
+		<div class="container">
+			<div class="row">
+				<div class="intro-text">
+					<h3 class="name">This url is already shortened</h3>
+                    <p><span class="skills"><a href ="{{shortened}}">{{shortened}}</a></span></p>
+                    <p> <div >
+                        <h1>Thank You!</h1>
+                        <h3 class="lead"><strong>Join our coding club</strong> for 100s of placement and internship opportunities and tutorials</h3>
+                        <p class="lead">
+						  <a class="btn btn-primary btn-sm" href="https://t.me/joinchat/KGbnOEzy-m3j6wbkGN4l8Q" role="button" 
+						  style="background-color: darkblue; padding-top: 10px; padding-left: 20px; padding-right: 20px; padding-bottom: 10px; font-size: 1em;"> Join </a>
+						</p>
+						
+                      </div></p> 
+
+					
+						<!-- <a href = "https://t.me/joinchat/KGbnOEzy-m3j6wbkGN4l8Q" < button style="font-size: 24px; background-color: darkblue;"  Join ></a><br> -->
+						<!-- <a class = "ab" href="default.asp" target="_blank">This is a link</a><br><br> -->
+                   
+
+				</div>
+				
+			</div>
+			<div>
+				<a href = "https://www.youtube.com/channel/UCTLzD9A-M_ll2m7Wj45sHJg"><img src="{% static '/image.jpg'%}" alt="O(1) Coding Club" ></a>
+				
+			</div>
+			<br>
+			<div><a class="btn btn-primary btn-sm" href="https://forms.gle/XTSSNxtxacu2ZnB87" role="button" 
+				style="background-color: darkblue; padding-top: 10px; padding-left: 20px; padding-right: 20px; padding-bottom: 10px; font-size: 1em;"> Give Feedback </a></div>
+		</div>
+	</header>
+	
+
+	<!-- Footer -->
+	<footer class="text-center">
+		<div class="container">
+			<div class="row">
+				<h3> Created by -
+					<a href="#" target="_blank" style="color: white;"> Rituj and Mayur </a>
+				</h3>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>
